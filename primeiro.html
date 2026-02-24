@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>programa que vai pedir um numero</title>
+    <style>
+        .primeiro-input{
+            width: 200px;
+            height: 30px;
+            font-size: 16px;
+            border-radius: 12px;
+            padding: auto;
+            border: 2px solid black;
+        }
+        .first-button{
+            width: 100px;
+            height: 30px;
+            font-size: 16px;
+            background-color: black;
+            color: white;
+            border-radius: 12px;
+            padding: auto;
+            font-style: italic;
+
+        }
+.corpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+    </style>
+</head>
+<body class="corpo">
+    
+    <h2>Digite um número</h2>
+    <input type="number" id="numero" placeholder="Digite um número"class="primeiro-input">
+    <br>
+    <button onclick="ezequiel()" class="first-button">verificar</button>
+    <p id="resultado"></p>
+    <!--linguagem de programação 
+    JAVASCRIPT-->
+    <script>
+        function ezequiel(){
+
+            let numero = document.getElementById("numero").value;
+            document.getElementById("resultado").innerHTML = "O número digitado é: " + numero;
+        }
+        
+    </script>
+</body>
+</html>
+C:\Users\Micro11\Desktop\aulaSIM\segundo.html

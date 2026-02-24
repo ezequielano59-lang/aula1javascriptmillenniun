@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>soma dois números </title>
+    <STYLE>
+.corpo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+    </STYLE>
+
+</head>
+<body class="CORPO">
+    <p>primeiro número</p> <br>
+    <input type="number" id="numero1" class="first-imput"> <br>
+    <p>segundo número</p><br>
+    <input type="number" id="numero2" class="second-imput"><br>
+    <br>
+    <button onclick="soma()">somar</button>
+    <p id="resultado"></p>
+    <script>
+        function soma(){
+            //criar variavel para pegar o valor do input
+            let numero1 = parseFloat (document.getElementById("numero1").value);
+            let numero2 = parseFloat(document.getElementById("numero2").value);
+            //calcular a soma dos dois numeros
+            let resultado = numero1 + numero2;
+            //envia para a tela o resultado da soma 
+            document.getElementById("resultado").innerHTML = "O resultado da soma é: " + resultado;
+        }
+    </script>
+</body>
+</html>
