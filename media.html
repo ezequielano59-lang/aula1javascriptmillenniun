@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>média dos números </title>
+</head>
+<body>
+    <div class="container">
+        <p>Primeiro número</p> <br>
+        <input type="number" id="numero1" class="first-imput"> <br>
+        <p>Segundo número</p><br>
+        <input type="number" id="numero2" class="second-imput"><br>
+        <button onclick="media()"> plin</button>
+        <p id="resultado"></p>
+        <script>
+            function media(){
+                let numero1 = parseFloat(document.getElementById("numero1").value);
+                let numero2 = parseFloat(document.getElementById("numero2").value);
+                let resultado = (numero1 + numero2) / 2;
+                document.getElementById("resultado").innerHTML = "O resultado da média é: " + resultado;
+            }
+        </script>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            
+            body {
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            
+            .container {
+                background: white;
+                padding: 40px;
+                border-radius: 15px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                width: 100%;
+                max-width: 400px;
+                text-align: center;
+            }
+            
+            p {
+                color: #333;
+                font-size: 16px;
+                margin-bottom: 10px;
+                font-weight: 500;
+            }
+            
+            input {
+                width: 100%;
+                padding: 12px;
+                margin-bottom: 20px;
+                border: 2px solid #ddd;
+                border-radius: 8px;
+                font-size: 16px;
+                transition: border-color 0.3s;
+            }
+            
+            input:focus {
+                outline: none;
+                border-color: #667eea;
+            }
+            
+            button {
+                width: 100%;
+                padding: 12px;
+                background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                color: white;
+                border: none;
+                border-radius: 8px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+                transition: transform 0.2s;
+            }
+            
+            button:hover {
+                transform: scale(1.02);
+            }
+            
+            #resultado {
+                margin-top: 20px;
+                color: #667eea;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        </style>
+    </div>
+</body>
+</html>
